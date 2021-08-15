@@ -1,0 +1,113 @@
+/***VARIABLES***/
+:root {
+  --logo-color: hsl(343, 78%, 40%);
+  --text-color:hsl(0, 30%, 95%);
+  --synopsis-color: #Ffff;
+  --body-color: hsl(240, 2%, 9%);
+  --logo-font: (font-family: 'Bebas Neue', cursive);
+  --movie-title-font: (font-family: 'Roboto', sans-serif);
+  --body-font: (font-family: 'Roboto', sans-serif);
+}
+
+/**RESET**/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  background: var(--body-color);
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+/**HEADER**/
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo{
+  margin-left: 0.625rem;
+  color: var(--logo-color);
+  font-family: var(--logo-font);
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li a {
+  color: var(--text-color);
+  margin-right: 0.875rem;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+header nav a:hover {
+  color: #ffff;
+}
+
+header nav ul li a {
+  transition: color 0.3s;
+  position: relative;
+}
+
+header nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 1px;
+  background-color: var(--logo-color);
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  transition: width 0.2s;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+  width: 100%;
+}
+
+/***MAIN***/
+
+/**Movie Highlight**/
+
+.main-highlight {
+  font-size: 1rem;
+  background-image: linear-gradient(rgb(0,0,0, .5), rgb(0,0,0,.5)100%), url("/assets/img/Peaky_cover.jpg");  
+  height: 25rem;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+.main-highlight .title {
+  font-size: 2.5rem;
+  font-weight: 600;
+
+}
+
+.synopsis {
+  color:var(--synopsis-color);
+  margin-bottom: 5.625rem;
+}
