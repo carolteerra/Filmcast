@@ -109,12 +109,12 @@ header nav ul li a.active::after {
 .main-highlight .title {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .main-highlight .synopsis {
   color: var(--synopsis-color);
-  margin-bottom: 5.625rem;
+  margin-bottom: 10%;
   margin-top: 0.625rem;
 }
 
@@ -124,9 +124,9 @@ header nav ul li a.active::after {
   color: hsl(0, 30%, 95%);
   padding: 1rem 2rem;
   margin-right: 1rem;
-  margin-bottom: 10%;
   cursor: pointer;
   transition: 0.3s ease all;
+  max-width: 100%;
 }
 
 i {
@@ -139,4 +139,80 @@ i {
 
 .main-highlight .container {
   width: 70%;
+  max-block-size: 25rem;
+}
+
+/***CARROUSEL***/
+
+.section-title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.box-sample {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+/****RESPONSIVE****/
+
+@media screen and (max-width: 575px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+  }
+
+  header .logo {
+    margin-bottom: 0.625rem;
+  }
+
+  main .main-highlight .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 546px) {
+  .button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 369px) {
+  .title {
+    font-size: 1.5rem;
+    margin-top: 5%;
+  }
+
+  .main-highlight .container {
+    height: 100%;
+    flex-wrap: wrap;
+  }
+
+  .synopsis {
+    margin-bottom: 0;
+  }
+
+  .button {
+    padding: 1rem 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 30%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .synopsis {
+    width: 50%;
+  }
 }
