@@ -1,8 +1,8 @@
 /***VARIABLES***/
 :root {
   --logo-color: hsl(343, 78%, 40%);
-  --text-color:hsl(0, 30%, 95%);
-  --synopsis-color: #Ffff;
+  --text-color: hsl(0, 30%, 95%);
+  --synopsis-color: #ffff;
   --body-color: hsl(240, 2%, 9%);
   --logo-font: (font-family: 'Bebas Neue', cursive);
   --movie-title-font: (font-family: 'Roboto', sans-serif);
@@ -10,10 +10,10 @@
 }
 
 /**RESET**/
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ul {
@@ -24,11 +24,16 @@ a {
   text-decoration: none;
 }
 
-
 body {
   background: var(--body-color);
   font-family: var(--body-font);
   color: var(--text-color);
+}
+
+/***WRAPPER***/
+
+.container {
+  margin-left: 1.25rem;
 }
 
 /**HEADER**/
@@ -39,7 +44,7 @@ header .container {
   justify-content: space-between;
 }
 
-header .logo{
+header .logo {
   margin-left: 0.625rem;
   color: var(--logo-color);
   font-family: var(--logo-font);
@@ -87,27 +92,51 @@ header nav ul li a.active::after {
 
 /***MAIN***/
 
-/**Movie Highlight**/
+/**Main Movie Highlight**/
 
 .main-highlight {
   font-size: 1rem;
-  background-image: linear-gradient(rgb(0,0,0, .5), rgb(0,0,0,.5)100%), url("/assets/img/Peaky_cover.jpg");  
+  background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5) 100%),
+    url('/assets/img/Peaky_cover.jpg');
   height: 25rem;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
 }
 
 .main-highlight .title {
   font-size: 2.5rem;
   font-weight: 600;
-
+  margin-top: 15%;
 }
 
-.synopsis {
-  color:var(--synopsis-color);
+.main-highlight .synopsis {
+  color: var(--synopsis-color);
   margin-bottom: 5.625rem;
+  margin-top: 0.625rem;
+}
+
+.button {
+  background-color: rgb(0, 0, 0, 0.6);
+  border: none;
+  color: hsl(0, 30%, 95%);
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  margin-bottom: 10%;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+i {
+  margin-right: 1rem;
+}
+.button:hover {
+  background-color: var(--text-color);
+  color: var(--body-color);
+}
+
+.main-highlight .container {
+  width: 70%;
 }
